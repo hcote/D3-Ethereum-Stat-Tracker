@@ -36,6 +36,17 @@ span {
   background: #D3D3D3;
   border-radius: 4px;
   margin: auto;
-  min-width: 175px;
-  min-height: 175px;
+  width: 175px;
+  height: 175px;
+}
+
+.focused_block {
+  background: #D3D3D3;
+  border-radius: 4px;
+  margin: auto;
+  max-width: 75%;
+}
+
+.hide {
+  display: none;
 }
