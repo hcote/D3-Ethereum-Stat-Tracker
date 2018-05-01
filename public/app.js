@@ -16,7 +16,7 @@ $('input').on('click', function() {
        console.log(json.hash);
        console.log(json.height);
        var id = `${json.height}`;
-       $(`#id`).append(`<p>${json.hash}</p>`)
+       $(`#${id}`).append(`<p>${json.hash}</p>`)
        // $('this').append(`
        //     <h2>Block Head</h2>
        //     <p>Timestamp: <span class="data"> ${json.time}</span></p>
@@ -66,6 +66,7 @@ $('input').on('click', function() {
     // }
     //
      function handleError(err) {
+       alert('Hourly limit of 200 requests reached. Wait and try again later')
        console.log(err);
      }
     //
