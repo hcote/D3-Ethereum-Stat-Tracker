@@ -21,6 +21,7 @@ $('.expand_block').on('click', function() {
        $(`.${id}`).addClass('hide');
        $('.collapse_block').removeClass('hide');
        $(`#${id}`).append(`
+         <section class="tx_data">
            <h2>Block Head</h2>
            <p>Timestamp: <span class="data"> ${json.time}</span></p>
            <p>Height: <span class="data"> ${json.height}</span></p>
@@ -33,20 +34,22 @@ $('.expand_block').on('click', function() {
               <p>${json.txids[0]}</p>
               <p>${json.txids[1]}</p>
              <br>
+            </section>
              `)
            };
 
      function handleError(err) {
-       alert('Hourly limit of 200 requests reached. Wait and try again later')
+       alert('Hourly limit of 200 requests reached. Try again at the top of the hour')
        console.log(err);
      }
 
      $('.collapse_block').on('click', function() {
-       console.log(this.parent);
+       console.log(this);
        $(this).parent().addClass('unfocused_block');
        $(this).parent().removeClass('focused_block');
-       $(this).parent().html('');
-       $(this).closest('input').removeClass('hide');
+       $(this).siblings().removeClass('hide');
+       $(this).addClass('hide');
+       $(this).siblings().html('');
      })
 
 })
