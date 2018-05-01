@@ -31,11 +31,31 @@ $('.expand_block').on('click', function() {
            <p>This Block Hash: <span class="data"> ${json.hash}</span></p>
            <hr>
            <p class="tx_ids_head">TX IDs:</p>
-              <p><span class="data">${json.txids[0]}</span></p>
-              <p><span class="data">${json.txids[1]}</span></p>
-              <p><span class="data">${json.txids[2]}</span></p>
-              <p><span class="data">${json.txids[3]}</span></p>
-              <p><span class="data">${json.txids[4]}</span></p>
+              <details><summary><span>${json.txids[0]}</span></summary>
+              <p>Sending Address: </p>
+              <p>Receiving Address: </p>
+              <p>Amount BTC: </p>
+              </details>
+              <details><summary><span>${json.txids[1]}</span></summary>
+              <p>Sending Address: </p>
+              <p>Receiving Address: </p>
+              <p>Amount BTC: </p>
+              </details>
+              <details><summary><span>${json.txids[2]}</span></summary>
+              <p>Sending Address: </p>
+              <p>Receiving Address: </p>
+              <p>Amount BTC: </p>
+              </details>
+              <details><summary><span>${json.txids[3]}</span></summary>
+              <p>Sending Address: </p>
+              <p>Receiving Address: </p>
+              <p>Amount BTC: </p>
+              </details>
+              <details><summary><span>${json.txids[4]}</span></summary>
+              <p>Sending Address: </p>
+              <p>Receiving Address: </p>
+              <p>Amount BTC: </p>
+              </details>
              <br>
             </section>
              `)
