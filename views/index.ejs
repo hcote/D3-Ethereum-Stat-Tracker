@@ -5,69 +5,26 @@
     <title></title>
     <link rel="stylesheet" href="/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="/appss.js" charset="utf-8"></script>
+    <script src="/app.js" charset="utf-8"></script>
   </head>
   <body>
-    <div class="big_div">
+    <% for (i=0; i < 10; i++) { %>
+      <div class="unfocused_block" id="<%= blockheight - i%>">
+        <input type="button" name="<%= blockheight - i%>" value="Enter Block" class="expand_block <%= blockheight - i%>">
+        <input type="button" value="Collapse Block" class="hide collapse_block">
+      </div>
+      <div class="line">
+      </div>
+  <%  } %>
+  <hr>
+  <div class="line">
+  </div>
+  <div class="unfocused_block" id="<%= blockheight - i%>">
+    <input type="button" name="<%= blockheight - i%>" value="Enter Block" class="expand_block <%= blockheight - i%>">
+    <input type="button" value="Collapse Block" class="hide collapse_block">
+    <h2>Genesis Block</h2>
+  </div>
 
-    </div>
-    <section class="last_block">
-      <h2>Block Head</h2>
-      <p>Timestamp: <span class="data"><%= block.time %></span></p>
-      <p>Height: <span class="data"><%= block.height %></span></p>
-      <p>Nonce: <span class="data"><%= block.nonce %></span></p>
-      <p>Merkle Root: <span class="data"><%= block.mrkl_root %></span></p>
-      <p>Previous Block Hash: <span class="data"><%= block.prev_block %></span></p>
-      <p>This Block Hash: <span class="data"><%= block.hash %></span></p>
-      <hr>
-      <p class="tx_ids_head">TX IDs:</p>
 
-        <br>
-    </section>
-    <section class="line">
-    </section>
-    <section class="unfocused_block">
-      Click me to Start!
-    </section>
-    <section class="line">
-    </section>
-    <section class="unfocused_block">
-    </section>
-    <section class="line">
-    </section>
-    <section class="unfocused_block">
-    </section>
-    <section class="line">
-    </section>
-    <section class="unfocused_block">
-    </section>
-    <section class="line">
-    </section>
-    <section class="unfocused_block">
-    </section>
-    <section class="line">
-    </section>
-    <section class="unfocused_block">
-    </section>
-    <section class="line">
-    </section>
-    <section class="unfocused_block">
-    </section>
-    <section class="line">
-    </section>
-    <section class="unfocused_block">
-    </section>
-    <section class="line">
-    </section>
-    <section class="unfocused_block">
-    </section>
-    <section class="line">
-    </section>
-    <section class="unfocused_block">
-    </section>
-    <section class="line">
-    </section>
-    <section class="unfocused_block">
-    </section>
   </body>
 </html>

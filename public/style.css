@@ -28,7 +28,7 @@ span {
 .line {
   border: 1px solid black;
   width: 1px;
-  height: 175px;
+  height: 150px;
   margin: auto;
 }
 
@@ -44,7 +44,7 @@ span {
   background: #D3D3D3;
   border-radius: 4px;
   margin: auto;
-  max-width: 75%;
+  max-width: 750px;
 }
 
 .hide {

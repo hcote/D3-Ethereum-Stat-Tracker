@@ -6,15 +6,15 @@ $('.expand_block').on('click', function() {
 
     $.ajax({
        method: 'GET',
-       url: `https://api.blockcypher.com/v1/btc/main/blocks/${this.name}?txstart=1&limit=1`,
+       url: `https://api.blockcypher.com/v1/btc/main/blocks/${this.name}?txstart=1&limit=10`,
        success: handleSuccess,
        error: handleError
      });
    })
 
      function handleSuccess(json) {
-       console.log(json.hash);
-       console.log(json.height);
+       console.log(json);
+       console.log(json.txids);
        var id = `${json.height}`;
        $(`#${id}`).addClass('focused_block');
        $(`#${id}`).removeClass('unfocused_block');
@@ -31,8 +31,11 @@ $('.expand_block').on('click', function() {
            <p>This Block Hash: <span class="data"> ${json.hash}</span></p>
            <hr>
            <p class="tx_ids_head">TX IDs:</p>
-              <p>${json.txids[0]}</p>
-              <p>${json.txids[1]}</p>
+              <p><span class="data">${json.txids[0]}</span></p>
+              <p><span class="data">${json.txids[1]}</span></p>
+              <p><span class="data">${json.txids[2]}</span></p>
+              <p><span class="data">${json.txids[3]}</span></p>
+              <p><span class="data">${json.txids[4]}</span></p>
              <br>
             </section>
              `)

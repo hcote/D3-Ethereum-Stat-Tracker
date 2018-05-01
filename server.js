@@ -11,31 +11,11 @@ app.use(function(req, res, next) {
   next();
 });
 
-// blockchain.info
-app.get('/', function(req, res) {
-  axios.get('https://blockchain.info/latestblock')
-    .then(function(response) {
-      console.log(response.data.hash);
-        axios.get(`https://blockchain.info/rawblock/${response.data.hash}`)
-          .then(function(block) {
-            console.log(block.data.prev_block);
-         res.render('index', {block: block.data})
-          })
-        .catch(function(err) {
-          console.log(err);
-       })
-     .catch(function(err) {
-       console.log(err);
-    })
-  })
-  // res.render('index')
-})
-
 // blockcypher
-app.get('/test', function(req, res) {
+app.get('/', function(req, res) {
   axios.get('https://blockchain.info/q/getblockcount')
     .then(function(response) {
-         res.render('test', {blockheight: response.data})
+         res.render('index', {blockheight: response.data})
        })
      .catch(function(err) {
        console.log(err);
