@@ -6,7 +6,7 @@ $('input').on('click', function() {
 
     $.ajax({
        method: 'GET',
-       url: `https://api.blockcypher.com/v1/btc/main/blocks/${this.value}?txstart=1&limit=1`,
+       url: `https://api.blockcypher.com/v1/btc/main/blocks/${this.name}?txstart=1&limit=1`,
        success: handleSuccess,
        error: handleError
      });
@@ -16,21 +16,20 @@ $('input').on('click', function() {
        console.log(json.hash);
        console.log(json.height);
        var id = `${json.height}`;
-       $(`#${id}`).append(`<p>${json.hash}</p>`)
-       // $('this').append(`
-       //     <h2>Block Head</h2>
-       //     <p>Timestamp: <span class="data"> ${json.time}</span></p>
-       //     <p>Height: <span class="data"> ${json.height}</span></p>
-       //     <p>Nonce: <span class="data"> ${json.nonce}</span></p>
-       //     <p>Merkle Root: <span class="data"> ${json.mrkl_root}</span></p>
-       //     <p>Previous Block Hash: <span class="data"> ${json.block}</span></p>
-       //     <p>This Block Hash: <span class="data"> ${json.hash}</span></p>
-       //     <hr>
-       //     <p class="tx_ids_head">TX IDs:</p>
-       //        <p>${json.txids[0]}</p>
-       //        <p>${json.txids[1]}</p>
-       //       <br>
-       // `)
+       $(`#${id}`).append(`
+           <h2>Block Head</h2>
+           <p>Timestamp: <span class="data"> ${json.time}</span></p>
+           <p>Height: <span class="data"> ${json.height}</span></p>
+           <p>Nonce: <span class="data"> ${json.nonce}</span></p>
+           <p>Merkle Root: <span class="data"> ${json.mrkl_root}</span></p>
+           <p>Previous Block Hash: <span class="data"> ${json.prev_block}</span></p>
+           <p>This Block Hash: <span class="data"> ${json.hash}</span></p>
+           <hr>
+           <p class="tx_ids_head">TX IDs:</p>
+              <p>${json.txids[0]}</p>
+              <p>${json.txids[1]}</p>
+             <br>
+       `)
         };
 
     //

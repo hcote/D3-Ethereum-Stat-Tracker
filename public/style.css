@@ -18,6 +18,7 @@ p {
 span {
   background: #FFF;
   border-radius: 4px;
+  padding: 0 4px;
 }
 
 .tx_ids_head {
@@ -35,6 +36,6 @@ span {
   background: #D3D3D3;
   border-radius: 4px;
   margin: auto;
-  width: 175px;
-  height: 175px;
+  min-width: 175px;
+  min-height: 175px;
 }
