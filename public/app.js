@@ -42,8 +42,11 @@ $('.expand_block').on('click', function() {
      }
 
      $('.collapse_block').on('click', function() {
-       $('this').addClass('unfocused_block');
-       $('this').removeClass('focused_block')
+       console.log(this.parent);
+       $(this).parent().addClass('unfocused_block');
+       $(this).parent().removeClass('focused_block');
+       $(this).parent().html('');
+       $(this).closest('input').removeClass('hide');
      })
 
 })
