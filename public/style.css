@@ -1,0 +1,40 @@
+section {
+  border-radius: 8px;
+  margin: auto;
+  background: #D3D3D3;
+  width: auto;
+  max-width: 700px;
+}
+
+h2 {
+  text-align: center;
+}
+
+p {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+span {
+  background: #FFF;
+  border-radius: 4px;
+}
+
+.tx_ids_head {
+  text-align: center;
+}
+
+.line {
+  border: 1px solid black;
+  width: 1px;
+  height: 175px;
+  margin: auto;
+}
+
+.unfocused_block {
+  background: #D3D3D3;
+  border-radius: 4px;
+  margin: auto;
+  width: 175px;
+  height: 175px;
+}
