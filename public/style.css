@@ -6,7 +6,7 @@ section {
   max-width: 700px;
 }
 
-h2 {
+h3 {
   text-align: center;
 }
 
@@ -18,7 +18,7 @@ p {
 span {
   background: #FFF;
   border-radius: 4px;
-  padding: 0 4px;
+  padding: 0 2px;
 }
 
 .tx_ids_head {
@@ -26,7 +26,7 @@ span {
 }
 
 .line {
-  border: 1px solid black;
+  border-right: 2px solid black;
   width: 1px;
   height: 150px;
   margin: auto;
@@ -38,6 +38,7 @@ span {
   margin: auto;
   width: 175px;
   height: 175px;
+  border: 2px solid green;
 }
 
 .focused_block {
@@ -45,8 +46,29 @@ span {
   border-radius: 4px;
   margin: auto;
   max-width: 750px;
+  border: 2px solid green;
+}
+
+.inline_block {
+  display: inline-block;
 }
 
 .hide {
   display: none;
+}
+
+.tx_input {
+  width: 100%;
+  height: 2.5em;
+  display: block;
+  margin-bottom: 6px;
+  padding-left: 15px;
+}
+
+.inline {
+  display: inline;
+}
+
+.red {
+  border: 2px solid red;
 }
