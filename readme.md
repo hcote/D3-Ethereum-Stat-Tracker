@@ -1,3 +1,6 @@
+## Hosted
+https://visualize-the-blockchain.herokuapp.com/
+
 ## Problem
 Most people have nothing to reference to help them understand what a blockchain is. Hearing it described as "decentralized system", "peer to peer", "distributed ledger", "cryptographically secure", etc. doesn't mean much to the average person, no matter how many times it's verbally explained.
 
