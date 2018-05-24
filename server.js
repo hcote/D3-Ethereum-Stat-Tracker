@@ -20,7 +20,6 @@ app.get('/', function(req, res) {
      .catch(function(err) {
        console.log(err);
     })
-  // res.render('index')
 })
 
 app.get('/data', function(req, res) {
